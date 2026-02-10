@@ -1,0 +1,126 @@
+type VoltageV3Factory_FeeAmountEnabled {
+  id: ID!
+  fee: BigInt!
+  tickSpacing: BigInt!
+}
+
+type VoltageV3Factory_FeeAmountExtraInfoUpdated {
+  id: ID!
+  fee: BigInt!
+  whitelistRequested: Boolean!
+  enabled: Boolean!
+}
+
+type VoltageV3Factory_OwnerChanged {
+  id: ID!
+  oldOwner: String!
+  newOwner: String!
+}
+
+type VoltageV3Factory_PoolCreated {
+  id: ID!
+  token0: String!
+  token1: String!
+  fee: BigInt!
+  tickSpacing: BigInt!
+  pool: String!
+}
+
+type VoltageV3Factory_SetLmPoolDeployer {
+  id: ID!
+  lmPoolDeployer: String!
+}
+
+type VoltageV3Factory_WhiteListAdded {
+  id: ID!
+  user: String!
+  verified: Boolean!
+}
+
+type VoltageV3Pair_Burn {
+  id: ID!
+  owner: String!
+  tickLower: BigInt!
+  tickUpper: BigInt!
+  amount: BigInt!
+  amount0: BigInt!
+  amount1: BigInt!
+}
+
+type VoltageV3Pair_Collect {
+  id: ID!
+  owner: String!
+  recipient: String!
+  tickLower: BigInt!
+  tickUpper: BigInt!
+  amount0: BigInt!
+  amount1: BigInt!
+}
+
+type VoltageV3Pair_CollectProtocol {
+  id: ID!
+  sender: String!
+  recipient: String!
+  amount0: BigInt!
+  amount1: BigInt!
+}
+
+type VoltageV3Pair_Flash {
+  id: ID!
+  sender: String!
+  recipient: String!
+  amount0: BigInt!
+  amount1: BigInt!
+  paid0: BigInt!
+  paid1: BigInt!
+}
+
+type VoltageV3Pair_IncreaseObservationCardinalityNext {
+  id: ID!
+  observationCardinalityNextOld: BigInt!
+  observationCardinalityNextNew: BigInt!
+}
+
+type VoltageV3Pair_Initialize {
+  id: ID!
+  sqrtPriceX96: BigInt!
+  tick: BigInt!
+}
+
+type VoltageV3Pair_Mint {
+  id: ID!
+  sender: String!
+  owner: String!
+  tickLower: BigInt!
+  tickUpper: BigInt!
+  amount: BigInt!
+  amount0: BigInt!
+  amount1: BigInt!
+}
+
+type VoltageV3Pair_SetFeeProtocol {
+  id: ID!
+  feeProtocol0Old: BigInt!
+  feeProtocol1Old: BigInt!
+  feeProtocol0New: BigInt!
+  feeProtocol1New: BigInt!
+}
+
+type VoltageV3Pair_SetLmPoolEvent {
+  id: ID!
+  addr: String!
+}
+
+type VoltageV3Pair_Swap {
+  id: ID!
+  sender: String!
+  recipient: String!
+  amount0: BigInt!
+  amount1: BigInt!
+  sqrtPriceX96: BigInt!
+  liquidity: BigInt!
+  tick: BigInt!
+  protocolFeesToken0: BigInt!
+  protocolFeesToken1: BigInt!
+}
+
